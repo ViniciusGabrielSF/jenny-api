@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import routes from './routes';
 import { setupSwagger } from './config/swagger';
 import { routeNotFound } from './config/middleware/route-not-found.middleware';
+import { errorHandler } from './config/middleware/error-handler.middleware';
 
 dotenv.config();
 
@@ -22,5 +23,7 @@ app.use(cors());
 app.use('/api', routes);
 
 app.use(routeNotFound);
+
+app.use(errorHandler);
 
 export default app;
