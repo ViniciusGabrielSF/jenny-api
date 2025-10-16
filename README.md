@@ -1,2 +1,2 @@
 # jenny-api
-api for Jenny web app
+api for Jenny web appication
